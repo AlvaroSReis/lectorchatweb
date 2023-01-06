@@ -1,0 +1,19 @@
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login--btn {
+    font-size: 20px;
+    width: 80%;
+    background: "#204cfa";
+    height: 45;
+    padding: 20px;
+    margin-bottom: 30;
+    align-Items: 'center';
+    justify-content: 'center';
+    border-radius: 10;
+    box-shadow: '#000';
+}

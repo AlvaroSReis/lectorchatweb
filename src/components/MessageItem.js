@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MessageItem.css"
 
-export default function MessageItem () {
+export default function MessageItem ({data, user}) {
+
     return (
-        <div className="messageLine">
-            <div className="messageItem">
+        <div className="messageLine"
+        style={{
+            justifyContent: user.email === data.sender ? "flex-end" : "flex-start"
+        }}>
+            <div className="messageItem" 
+            style= {{
+                backgroundColor: user.email === data.sender ? "#A2DCF7" : " #FFFFFF"
+            }}
+            >
                 <div className="messageText">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eros mi, ultricies eu congue id, posuere sed urna. Nam rhoncus nunc lorem, bibendum pretium velit tempus non. Duis dictum nunc eu vestibulum mollis. Cras sed rhoncus nisl. Sed sit amet lorem risus. Etiam condimentum odio nibh, sit amet luctus turpis tristique porttitor. Cras nec convallis orci, vitae tincidunt dolor. Phasellus rhoncus ex at leo pharetra porta. Suspendisse eu libero a velit tincidunt sagittis. Praesent faucibus ultrices condimentum. Aenean sed dignissim leo. Pellentesque sit amet velit volutpat, tempor ligula in, iaculis ex.
+                {data.text}
                 </div>
             </div>
         </div>
